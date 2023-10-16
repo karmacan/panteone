@@ -1,0 +1,28 @@
+.navbar {
+  position: fixed;
+  z-index: 200;
+  top: 12px;
+  margin-top: 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  mix-blend-mode: difference;
+
+  .logo {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Neue Montreal';
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    transform: scale(.95, 1.4);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .link {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}

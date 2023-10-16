@@ -1,0 +1,94 @@
+.nav_button {
+  overflow: hidden;
+  position: relative;
+  width: 80px;
+  height: 12px;
+  cursor: pointer;
+
+  .top,
+  .bottom,
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+  }
+
+  .top,
+  &:before {
+    top: 0;
+  }
+
+  .bottom,
+  &:after {
+    bottom: 0;
+  }
+
+  .top,
+  .bottom {
+    left: 100%;
+    animation: to-center .1s ease-in-out .1s both;
+  }
+
+  .top {
+    animation-delay: .2s;
+  }
+
+  &:before,
+  &:after {
+    left: 100%;
+    
+    animation: center-to-left .1s ease-in-out both;
+  }
+
+  &:before {
+    animation-delay: .1s;
+  }
+
+  &:hover {
+    .top,
+    .bottom {
+      animation: center-to-right .1s ease-in-out both;
+    }
+
+    .bottom {
+      animation-delay: .1s;
+    }
+
+    &:before,
+    &:after {
+      left: -100%;
+      animation: to-center .1s ease-in-out .1s both;
+    }
+
+    &:after {
+      animation-delay: .2s;
+    }
+  }
+
+  @keyframes center-to-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes to-center {
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes center-to-left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+}

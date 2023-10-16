@@ -1,13 +1,87 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+@font-face {
+  font-family: 'Neue Montreal Thin';
+  src: url('/public/assets/fonts/pp-neue-montreal-cufonfonts-webfont/ppneuemontreal-thin.woff')
+    format('woff');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/public/assets/fonts/pp-neue-montreal-cufonfonts-webfont/ppneuemontreal-book.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'Neue Montreal Medium';
+  src: url('/public/assets/fonts/pp-neue-montreal-cufonfonts-webfont/ppneuemontreal-medium.woff')
+    format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  font-family: 'Neue Montreal';
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 85vh;
+}
+
+ul {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 2px 4px;
+  border-radius: 100vh;
+  border-color: #ccc;
+  user-select: none;
+  cursor: pointer;
+}
+
+input,
+input:hover,
+input:focus {
+  padding: 2px 4px;
+  border-radius: 100vh;
+  border-color: #ccc;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  width: fit-content;
+  object-position: center;
+  object-fit: contain;
+}
+
+b {
+  font-family: 'Neue Montreal Medium';
+}
+
+.breaking {
+  word-spacing: 100vw;
 }

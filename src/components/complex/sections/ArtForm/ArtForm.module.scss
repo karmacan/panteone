@@ -1,0 +1,79 @@
+.art_form {
+  margin-top: 200px;
+  padding: 0 16px;
+
+  .title {
+    padding-bottom: 40px;
+    color: #111;
+    font-size: clamp(16px, 28vw, 100vw);
+    font-family: 'Playfair Display';
+    line-height: 0.7;
+    text-transform: uppercase;
+
+    &:nth-of-type(2) {
+      background: red;
+    }
+  }
+
+  .bottom {
+    position: relative;
+    margin-top: 80px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .text {
+        max-width: 45vw;
+        opacity: 0.7;
+      }
+
+      .button {
+        margin-right: 12px;
+      }
+    }
+
+    .image {
+      --scroll-inc: 0px;
+
+      position: absolute;
+      z-index: 10;
+      right: 120px;
+      bottom: calc(var(--scroll-inc) - 1300px);
+    }
+
+    .row {
+      opacity: 0.9;
+      margin-top: auto;
+      margin-bottom: 20px;
+      padding: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Playfair Display';
+    }
+  }
+
+  /* M (iPad 1, 2, 3, 4) */
+  @media (min-width: 414px) and (max-width: 768px) {
+    .bottom {
+      .image {
+        right: 80px;
+        bottom: calc(var(--scroll-inc) - 1200px);
+      }
+    }
+  }
+
+  /* S- (iPhone 6+, 7+, 8+) */
+  @media (max-width: 414px) {
+    .bottom {
+      .image {
+        right: 40px;
+        bottom: calc(var(--scroll-inc) - 1100px);
+      }
+    }
+  }
+}

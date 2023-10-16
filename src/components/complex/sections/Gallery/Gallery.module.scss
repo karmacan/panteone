@@ -1,0 +1,19 @@
+.gallery {
+  .about {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 calc(20px + 1vw);
+    padding-top: 60px;
+
+    .left {
+      font-family: 'Playfair Display';
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .right {
+      max-width: 50%;
+      opacity: 0.6;
+    }
+  }
+}

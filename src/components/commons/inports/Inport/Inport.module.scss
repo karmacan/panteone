@@ -1,0 +1,23 @@
+.inport {
+  position: relative;
+  width: fit-content;
+  
+  input {
+    padding-left: 0;
+    padding-bottom: 15px;
+    padding-right: 40px;
+    border: none;
+    border-bottom: 1.5px solid #111;
+    border-radius: 0;
+    font-size: 40px;
+    font-family: 'Neue Montreal';
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    transform: rotate(-45deg);
+  }
+}

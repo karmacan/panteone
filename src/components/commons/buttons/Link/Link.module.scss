@@ -1,0 +1,50 @@
+.link {
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+
+    transition: left .2s ease-in-out;
+  }
+
+  &.size {
+    &-l {
+      font-size: 38px;
+
+      &:after {
+        height: 2px;
+      }
+    }
+  }
+
+  &:hover {
+    &:after {
+      left: 100%;
+    }
+  }
+
+  &.inactive {
+    &:after {
+      left: -100%;
+    }
+
+    &:hover {
+      &:after {
+        left: 0;
+      }
+    }
+  }
+}
+
+/* class может быть interface + */

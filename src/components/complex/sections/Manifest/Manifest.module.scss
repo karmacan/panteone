@@ -1,0 +1,74 @@
+.manifest {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+
+  .image {
+    --scroll-inc: 0px;
+
+    position: absolute;
+    z-index: 10;
+    bottom: calc(var(--scroll-inc) - 200px);
+    left: 60px;
+  }
+
+  .content {
+    margin-top: 85px;
+
+    .paragraph {
+      font-size: 2.5rem;
+
+      :global(.line) {
+        line-height: 0.9;
+        font-family: 'Neue Montreal Thin';
+
+        &:first-of-type {
+          padding-left: 50px;
+        }
+
+        :global(.bold) {
+          font-family: 'Neue Montreal';
+        }
+      }
+    }
+
+    .subord {
+      margin-top: 30px;
+      opacity: 0.6;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+  }
+
+  /* L+ (iPad Pro 10.5, Pro 12.9) */
+  @media (min-width: 768px) {
+    .image {
+      bottom: calc(var(--scroll-inc) - 150px);
+      padding-left: calc(5vw);
+
+      img {
+        height: calc(200px + 10vw);
+      }
+    }
+
+    .content {
+      margin-left: 40%;
+      margin-right: 15vw;
+      margin-top: 15vw;
+
+      .main {
+        font-size: clamp(16px, 3vw, 32px);
+      }
+    }
+  }
+}

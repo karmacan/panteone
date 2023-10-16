@@ -1,0 +1,11 @@
+.app {
+  --app-background: #f1f0ec;
+
+  background: var(--app-background);
+  color: #333;
+
+  ::selection {
+    background: #222;
+    color: #fff;
+  }
+}
